@@ -52,11 +52,7 @@ const checkingQuess = function (quess, event) {
     message.textContent = 'Choose number between: 1-20';
   } else if (quess !== randomNumber && isGame === false) {
   } else if (quess !== randomNumber) {
-    if (quess > randomNumber) {
-      message.textContent = 'too high...';
-    } else {
-      message.textContent = 'too low...';
-    }
+    message.textContent = quess > randomNumber ? 'too high...' : 'too low...';
     puncation--;
     score.textContent = puncation;
   }
